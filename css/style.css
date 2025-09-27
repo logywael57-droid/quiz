@@ -1,0 +1,619 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+body {
+    font-family: "Poppins", sans-serif;
+    color: #343434;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.42857143;
+    background-color: #fff;
+    position: relative;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Montserrat", sans-serif;
+}
+.title {
+    margin: 0 0 80px;
+}
+.title h3 {
+    position: relative;
+    display: inline-block;
+    z-index: 4;
+}
+.title h3::before {
+    content: "";
+    width: 100%;
+    height: 30px;
+    background-image: url(../imgs/imgs/dots.png);
+    background-repeat: repeat;
+    position: absolute;
+    bottom: -10px;
+    left: 0px;
+    z-index: -1;
+}
+
+/* style navbar */
+.logo {
+    letter-spacing: 1px;
+}
+.my-nav a {
+    position: relative;
+    line-height: 20px;
+    padding: 0 !important;
+}
+.my-nav a.active::before,
+.my-nav a:hover::before {
+    width: 100%;
+}
+.my-nav a::before {
+    content: "";
+    width: 0;
+    height: 2px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: block;
+    transition: width 1s, background-color 0.3s;
+}
+.navbar-transparent {
+    background-color: transparent !important;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+.navbar-transparent .nav-link,
+.navbar-transparent .navbar-brand {
+    color: white !important;
+}
+.navbar-transparent .my-nav a::before {
+    background-color: white;
+    
+}
+.navbar-scrolled {
+    background-color: white !important;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-scrolled .nav-link,
+.navbar-scrolled .navbar-brand {
+    color: black !important;
+}
+.navbar-scrolled .my-nav a::before {
+    background-color: black;
+}
+
+/* style header */
+header {
+    background-image: linear-gradient(rgba(0,0,0,0.65)), url(../imgs/imgs/bg.jpg);
+    background-position: start;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
+header .header-content h1 {
+    line-height: 1.2;
+    font-weight: 200;
+}
+.typing::after {
+    content: "";
+    animation: typing 20s infinite;
+    white-space: nowrap;
+}
+
+.typing::after {
+    content: "";
+    animation: typing 20s infinite;
+    white-space: nowrap;
+}
+
+@keyframes typing {
+    0%   { content: "D|"; }
+    2%   { content: "De|"; }
+    4%   { content: "Dev|"; }
+    6%   { content: "Deve|"; }
+    8%   { content: "Devel|"; }
+    10%  { content: "Develo|"; }
+    12%  { content: "Develop|"; }
+    14%  { content: "Develope|"; }
+    16%  { content: "Developer|"; }
+
+    18%  { content: "Develope|"; }
+    20%  { content: "Develop|"; }
+    22%  { content: "Develo|"; }
+    24%  { content: "Devel|"; }
+    26%  { content: "Deve|"; }
+    28%  { content: "Dev|"; }
+    30%  { content: "De|"; }
+    32%  { content: "D|"; }
+
+    34%  { content: "D|"; }
+    36%  { content: "De|"; }
+    38%  { content: "Des|"; }
+    40%  { content: "Desi|"; }
+    42%  { content: "Desig|"; }
+    44%  { content: "Design|"; }
+    46%  { content: "Designe|"; }
+    48%  { content: "Designer|"; }
+
+    50%  { content: "Designe|"; }
+    52%  { content: "Design|"; }
+    54%  { content: "Desig|"; }
+    56%  { content: "Desi|"; }
+    58%  { content: "Des|"; }
+    60%  { content: "De|"; }
+    62%  { content: "D|"; }
+
+    64%  { content: "L|"; }
+    66%  { content: "La|"; }
+    68%  { content: "Lar|"; }
+    70%  { content: "Larr|"; }
+    72%  { content: "Larry|"; }
+    74%  { content: "Larry |"; }
+    76%  { content: "Larry D|"; }
+    78%  { content: "Larry Da|"; }
+    80%  { content: "Larry Dan|"; }
+    82%  { content: "Larry Dani|"; }
+    84%  { content: "Larry Danie|"; }
+    86%  { content: "Larry Daniel|"; }
+    88%  { content: "Larry Daniels|"; }
+
+    90%  { content: "Larry Daniel|"; }
+    92%  { content: "Larry Danie|"; }
+    94%  { content: "Larry Dani|"; }
+    96%  { content: "Larry Dan|"; }
+    98%  { content: "Larry Da|"; }
+
+    100% { content: " |"; }
+}
+
+
+header .header-content .icon a span {
+    font-size: 14px;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.3);
+    display: block;
+}
+/* style about section */
+.about .image {
+    position: relative;
+    padding: 0;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.about .image img {
+    width: 100%;
+    display: block;
+}
+
+.about .image::before {
+    content: "";
+    width: 80%;
+    height: 80%;
+    position: absolute;
+    left: 0;
+    bottom: -30px;
+    background-image: url(../imgs/imgs/dots.png);
+    background-repeat: repeat;
+    z-index: -1;
+}
+
+.about .content span {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.about .content p {
+    line-height: 2;
+    margin: 0;
+    font-size: 15px;
+    color: #748182;
+}
+
+.about-skills {
+    margin-top: 30px;
+}
+
+.about-skills .skills {
+    margin-bottom: 30px;
+}
+
+.about-skills .skills .item-progress {
+    width: 100%;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background: #f7f7f7;
+    box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.15) inset;
+    position: relative;
+}
+.about-skills .skills h6 {
+    font-size: 13px;
+    color: #fff;
+    margin-bottom: 0;
+    position: relative;
+    z-index: 444;
+}
+
+.about-skills .skills .item-progress span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    border-radius: 5px;
+    background-color: #1c1c1c;
+    transition: all 1s;
+}
+
+.about-skills .skills .item-progress span::before {
+    position: absolute;
+    top: 15%;
+    right: 10px;
+    font-size: 13px;
+    color: #fff;
+}
+
+.about-skills .skills .item-progress span.one::before { content: "95%"; }
+.about-skills .skills .item-progress span.two::before { content: "80%"; }
+.about-skills .skills .item-progress span.three::before { content: "90%"; }
+
+.about-skills .skills .item-progress span.one { 
+    width: 95%;
+    animation: fall1 1s linear;
+ }
+.about-skills .skills .item-progress span.two {
+     width: 80%;
+     animation: fall2 1s linear;
+ }
+.about-skills .skills .item-progress span.three {
+     width: 90%;
+     animation: fall3 1s linear;
+ }
+@keyframes fall1 {
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 95%;
+    }
+    
+}
+@keyframes fall2 {
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 80%;
+    }
+    
+}
+@keyframes fall3 {
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 90%;
+    }
+    
+}
+.about button {
+    margin-top: 20px;
+    padding: 10px 30px;
+}
+
+.btn-one,
+.btn-two {
+    transition: color 1s, outline 1s, background-color 1s;
+}
+
+.btn-one:hover {
+    color: black;
+    outline: black;
+    background-color: #fff;
+}
+
+/* style services section */
+.services {
+    background-color: #F7F7F7;
+}
+
+.card {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 30px -8px;
+    margin-bottom: 30px;
+    padding: 50px 20px;
+    background: #fff;
+    border-radius: 5px;
+}
+
+.card span {
+    font-size: 30px;
+    margin-bottom: 20px;
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    background: #f4f4f4;
+    border-radius: 50%;
+    transition: 0.5s;
+}
+
+.card h5 {
+    margin-bottom: 15px;
+    font-weight: 800;
+    font-size: 18px;
+}
+
+.card p {
+    word-spacing: 2px;
+}
+
+.card:hover span {
+    background-color: #1c1c1c;
+    color: #fff;
+}
+
+/* style work section */
+.work .item {
+    overflow: hidden;
+    position: relative;
+}
+
+.work .img img {
+    width: 100%;
+    display: block;
+}
+
+.work .item .inner {
+    position: absolute;
+    top: -5px;
+    width: 93%;
+    left: 15px;
+    bottom: 20px;
+    background: rgba(255, 255, 255, 0.95);
+    opacity: 0;
+    transition: all 0.5s;
+    z-index: 2;
+    transform: translateY(30px);
+}
+.work .item:hover .inner {
+    opacity: 1;
+    transform: translateY(0);
+    top: 5px;
+    bottom: 5px;
+}
+.work .item .inner h6{
+    transform: translateY(-15px);
+    transition: transform 1s;
+}
+.work .item .inner .ico{
+    transform: translateY(15px);
+    transition: transform 1s;
+}
+.work .item:hover .inner h6,
+.work .item:hover .inner .ico
+{
+    transform: translateY(0);
+}
+.work .item .inner .ico i {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    line-height: 28px;
+    color: #eee;
+    border-radius: 50%;
+    border: 1px solid #111;
+    background: #111;
+}
+
+.work .item .inner .ico i:hover {
+    background-color: #fff;
+    color: #1c1c1c;
+}
+
+.work .my-nav {
+    margin: 0 0 50px;
+}
+
+.work .my-nav button {
+    position: relative;
+    line-height: 20px;
+    padding: 0 !important;
+    transition: all 1s;
+}
+
+.work .my-nav button.active::before,
+.work .my-nav button:hover::before {
+    width: 100%;
+}
+
+.work .my-nav button::before {
+    content: "";
+    width: 0;
+    height: 3px;
+    background-color: #1c1c1c;
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    display: block;
+    transition: width 1s;
+}
+
+/* style client section */
+.client {
+    background-color: #F7F7F7;
+}
+
+.carousel-inner {
+    width: 100%;          
+    max-width: 945px;     
+    margin: 0 auto;
+}
+
+.carousel-item .item-image {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 15px;
+}
+
+.carousel-item p {
+    word-spacing: 2px;
+    line-height: 1.6;
+    font-size: 1rem;
+    margin: 0;
+}
+
+.carousel-item span {
+    font-size: 12px;
+}
+
+.carousel-indicators [data-bs-target] {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #748182;
+}
+
+/* style rating section */
+.rate .car p {
+    line-height: 1.6;
+    font-size: 15px;
+    color: #748182;
+    font-weight: 600;
+}
+
+/* style team section */
+.team {
+    background-color: #F7F7F7;
+}
+
+.team .card .card-body {
+    background-color: #5B5B5B;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.team .card .img {
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+
+.team .card .img img {
+    transition: transform 1s;
+}
+
+.team .card {
+    position: relative;
+    overflow: hidden;
+}
+
+.team .card .layear {
+    background-color: rgba(255, 255, 255, 0.95);
+    position: absolute;
+    text-align: center;
+    opacity: 0;
+    transform: rotateY(180deg) scale(0.5);
+    inset: 5px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.team .card:hover .layear {
+    opacity: 1;
+    transform: rotateY(0) scale(1);
+}
+
+.team .card .layear ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.team .card .layear ul li a {
+    color: #fff;
+    background-color: #000;
+    display: block;
+    font-size: 20px;
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    text-align: center;
+    border: 1px solid #000;
+    border-radius: 50%;
+}
+
+.team .card .layear ul li a:hover {
+    background-color: white;
+    color: black;
+}
+
+.team .card .img:hover img {
+    transform: scale(1.2);
+}
+
+/* style contact section */
+.contact .con span {
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    background: #f4f4f4;
+    border-radius: 50%;
+    transition: 0.5s;
+}
+
+.contact .con:hover span {
+    background-color: black;
+    color: white;
+}
+
+.contact .con p {
+    line-height: 1.6;
+    word-spacing: 2px;
+}
+.contact form{
+    width: 75%;
+}
+.contact form input[type="text"],
+.contact form input[type="email"],
+.contact form textarea{
+    width: 100%;
+    border: 0;
+    border-radius: 5px;
+    padding: 10px;
+    background: #f4f4f4;
+}
+.contact form textarea {
+    height: 160px;
+    max-height: 160px;
+    max-width: 100%;
+}
+.contact form input[type="text"]:focus,
+.contact form input[type="email"]:focus,
+.contact form textarea:focus {
+    outline: none;
+}
+
+/* style footer section */
+footer {
+    background-color: #1C1C1C;
+}
+
+footer .container p {
+    font-size: 13px;
+    color: #718182;
+    word-spacing: 2px;
+}
